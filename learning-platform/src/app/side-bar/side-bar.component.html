@@ -1,0 +1,52 @@
+<mat-sidenav-container class="app-container">
+  <mat-sidenav
+    [opened]="sideNavOpened"
+    mode="side"
+    [class.mat-elevation-z4]="true"
+    class="app-sidenav"
+  >
+    <mat-nav-list>
+      <mat-list-item routerLink="/news">
+        <mat-icon>library_books</mat-icon><span>News</span>
+      </mat-list-item>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          Learning courses
+        </mat-expansion-panel-header>
+        <mat-nav-list *ngFor="let course of allCourses">
+          <a mat-list-item routerLink="/course/{{ course.title }}">
+            <mat-icon>{{ course.icon }}</mat-icon
+            ><span>{{ course.title }}</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          Current courses
+        </mat-expansion-panel-header>
+        <mat-nav-list *ngFor="let course of startedCourses">
+          <a mat-list-item routerLink="/course/{{ course.title }}">
+            <mat-icon>{{ course.icon }}</mat-icon
+            ><span>{{ course.title }}</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+      <mat-expansion-panel [class.mat-elevation-z0]="true">
+        <mat-expansion-panel-header>
+          Finished courses
+        </mat-expansion-panel-header>
+        <mat-nav-list *ngFor="let course of finishedCourses">
+          <a mat-list-item routerLink="/course/{{ course.title }}">
+            <mat-icon>{{ course.icon }}</mat-icon
+            ><span>{{ course.title }}</span>
+          </a>
+        </mat-nav-list>
+      </mat-expansion-panel>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- <mat-sidenav-content>
+    <router-outlet>
+      <div class="app-sidenav-content">Components open here</div>
+    </router-outlet>
+  </mat-sidenav-content> -->
+</mat-sidenav-container>
