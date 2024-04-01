@@ -3,7 +3,7 @@ export class Course {
     public icon: string | undefined;
     public linkToPage: string | undefined;
     public description: string | undefined;
-    public courseStatus: Status | undefined
+    public courseStatus: Status | undefined;
 }
 
 export enum Status {

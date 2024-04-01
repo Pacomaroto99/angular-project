@@ -19,8 +19,9 @@ export class SideBarComponent implements OnInit {
   }
 
   loadPage(){
-    this.allCourses = this.courseService.getCourses();
-    this.startedCourses = this.courseService.getCourses().filter(c => c.courseStatus === Status.Started)
-    this.finishedCourses = this.courseService.getCourses().filter(c => c.courseStatus === Status.Finished)
+    this.courseService.getCourses().subscribe(items => {this.allCourses = items;
+      this.startedCourses = items.filter(c => c.courseStatus === Status.Started);
+      this.finishedCourses = items.filter(c => c.courseStatus === Status.Finished);
+    });
   }
 }

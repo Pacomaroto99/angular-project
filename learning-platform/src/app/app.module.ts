@@ -17,6 +17,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { NewsComponent } from './news/news.component';
 import { CoursePageComponent } from './course-page/course-page.component';
+import { AppRoutingModule } from './app-routing.modul';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,7 @@ import { CoursePageComponent } from './course-page/course-page.component';
     SideBarComponent,
     HeaderComponent,
     NewsComponent,
-    CoursePageComponent
+    CoursePageComponent,
   ],
   imports: [
     BrowserModule,
@@ -39,9 +41,11 @@ import { CoursePageComponent } from './course-page/course-page.component';
     RouterModule,
     MatExpansionModule,
     MatTooltipModule,
+    AppRoutingModule,
+    MatCardModule,
     RouterModule.forRoot([]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
