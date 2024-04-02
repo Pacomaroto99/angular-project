@@ -4,8 +4,9 @@ import { CoursePageComponent } from './course-page/course-page.component';
 import { NewsComponent } from './news/news.component';
 
 const ROUTES: Routes = [
+    {path: '', component: NewsComponent},
   { path: 'news', component: NewsComponent },
-  { path: 'course/:title', component: CoursePageComponent, data:{animation: 'course'} },
+  { path: 'course/:title', component: CoursePageComponent},
 ];
 
 @NgModule({
