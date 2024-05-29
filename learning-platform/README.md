@@ -1,27 +1,120 @@
-# LearningPlatform
+# Learning Platform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.0.
+The Learning Platform is a web application designed to help users navigate and track various learning courses. Built with Angular and Angular Material, it features a dynamic sidebar for easy course navigation, a header for site-wide controls, and separate pages for news and detailed course information.
 
-## Development server
+## Technologies
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Visual Studio Code** - as an IDE during the development process
+- **Angular** - for the front-end framework
+- **Angular Material** - for UI components and styling
+- **Git** - for source control management and documentation
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Prerequisites
 
-## Build
+Ensure you have the following installed on your machine:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- [Node.js](https://nodejs.org/) (version 12 or later)
+- [Angular CLI](https://angular.io/cli) (version 10 or later)
 
-## Running unit tests
+### Installation
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+1. Clone the repository:
 
-## Running end-to-end tests
+   ```bash
+   git clone https://github.com/your-username/learning-platform.git
+   cd learning-platform
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+2. Install the dependencies:
 
-## Further help
+   ```bash
+   npm install
+   ```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Running the Application
+
+To run the application locally:
+
+```bash
+ng serve
+```
+
+Navigate to `http://localhost:4200/` in your web browser to view the application.
+
+## Project Structure
+
+```
+learning-platform/
+│
+├── src/
+│   ├── app/
+│   │   ├── components/
+│   │   ├── models/
+│   │   ├── services/
+│   │   ├── app.component.ts
+│   │   ├── app.module.ts
+│   │   ├── app-routing.module.ts
+│   ├── assets/
+│   ├── environments/
+│   ├── index.html
+│   ├── main.ts
+│   ├── styles.scss
+│
+└── README.md
+```
+
+## Components
+
+### AppComponent
+
+The root component that initializes the application.
+
+### SideBarComponent
+
+A sidebar for easy navigation through different sections of the application.
+
+### HeaderComponent
+
+A header containing site-wide controls and navigation links.
+
+### NewsComponent
+
+Displays the latest news and updates related to the courses.
+
+### CoursePageComponent
+
+Shows detailed information about a specific course.
+
+## Services
+
+### CourseService
+
+Handles fetching and managing course data.
+
+### NewsService
+
+Handles fetching and displaying news related to courses.
+
+## Models
+
+### Course
+
+Represents a course with its details like title, description, duration, and more.
+
+### News
+
+Represents a news item with a title, content, and date.
+
+### Status
+
+Represents the status of a course enrollment or completion.
+
+## Dependencies
+
+- **Angular** - Front-end framework
+- **Angular Material** - UI components
+- **RxJS** - Reactive programming with observables
+- **TypeScript** - Superset of JavaScript for type safety and modern features
+- **SCSS** - CSS preprocessor for better styling management
