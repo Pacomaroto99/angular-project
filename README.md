@@ -139,10 +139,6 @@ Represents a course with its details like title, description, duration, and more
 
 Represents a news item with a title, content, and date.
 
-### Status
-
-Represents the status of a course enrollment or completion.
-
 ## Dependencies
 
 - **Angular** - Front-end framework
